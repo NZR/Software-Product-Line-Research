@@ -1,0 +1,38 @@
+CREATE DATABASE linux;
+
+USE linux;
+
+CREATE TABLE fine_grain_changes
+(
+f_id varchar(255) NOT NULL,
+arch varchar(20) NOT NULL,
+revision varchar(20) NOT NULL,
+feature_name varchar(255) NOT NULL,
+change_category varchar(20) NOT NULL,
+change_subcategory varchar(20) NOT NULL,
+change_type varchar(20) NOT NULL,
+old_value varchar(2048),
+new_value varchar(2048),
+PRIMARY KEY (f_id)
+);
+
+
+CREATE TABLE coarse_grain_changes
+(
+arch_id VARCHAR(255) NOT NULL,
+arch VARCHAR(20) NOT NULL,
+revision VARCHAR(20) NOT NULL,
+operation VARCHAR(200) NOT NULL,
+target VARCHAR(200) NOT NULL,
+PRIMARY KEY (arch_id)
+);
+
+
+f_id ACPI_V3.0_X86_1,
+arch X86,
+revision V3.0,
+feature_name ACPI,
+change_category MOD_FEATURE,
+change_type ADD_REF_SELECT,
+old_value ,
+new_value EXPERIMENTAL,
