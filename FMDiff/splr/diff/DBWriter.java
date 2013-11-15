@@ -103,9 +103,9 @@ public class DBWriter
 		if(_connection == null || _connection.isClosed())
 		{
 		
-			String user = "root";
-			String pass = "";
-			String url = "jdbc:mysql://127.0.0.1:3306/linux?failOverReadOnly=false";
+			String user = DataPaths.dbUser;//"root";
+			String pass = DataPaths.dbPass;//"";
+			String url = DataPaths.dbURL;//"jdbc:mysql://127.0.0.1:3306/linux?failOverReadOnly=false";
 			_connection = DriverManager.getConnection( url , user , pass );
 	
 			if ( !_connection.isValid( 1 ) )
@@ -126,7 +126,7 @@ public class DBWriter
 	{
 		String user = "root";
 		String pass = "";
-		String url = "jdbc:mysql://127.0.0.1:3306/linux?failOverReadOnly=false";
+		String url = DataPaths.dbURL;
 		Connection connection = DriverManager.getConnection( url , user , pass );
 		
 		return connection;

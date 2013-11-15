@@ -42,10 +42,13 @@ in the previous step, you are missing the Eclipse Modeling Tool plugin.
 Edit the build path of the FM_Diff project. Add your EMF Project as a project dependency. 
 This should fix all compilation errors and dependency issues. 
 
-4- Hack away. 
+4- Update paths
+	in the source file "DataPaths.java", you'll find a few variables that needs to be valuated
+	for your instalation. See the content of the file for details. 
+	THIS MUST BE DONE! 
 
-Feel free to run the tests first to check if everything is ok.
-Test 2
+5- Hack away. 
+
 
 
 

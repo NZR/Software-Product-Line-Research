@@ -12,10 +12,8 @@ import splr.extractor.UndertakerModelExtractor;
 public class DiffTool
 {
 
-	private String _rootFolder = "../Undertaker/history/";
-
-	//folders containing the RSF files.
-	private String[] _folders = {"v2.6.38","v2.6.39","v3.0","v3.1","v3.2", "v3.3", "v3.4","v3.5","v3.6","v3.7","v3.8"}; 
+	private String _rootFolder = DataPaths.rootFoler;
+	private String[] _folders =  DataPaths.revisions;// {"v2.6.38","v2.6.39","v3.0","v3.1","v3.2", "v3.3", "v3.4","v3.5","v3.6","v3.7","v3.8"}; 
 	
 	
 	private String _architecture = ""; //should be a RSF file name.
@@ -85,20 +83,6 @@ public class DiffTool
 	}
 
 
-//	private void checkFiles(String oldRSF, String newRSF)
-//	{
-//		File oldRSFFile = new File(oldRSF);
-//		File newRSFFile = new File(newRSF);
-//		
-//		if(!oldRSFFile.exists() || !newRSFFile.exists())
-//		{
-//			String missingFile = oldRSFFile.exists() ? "" : oldRSF;
-//			missingFile = newRSFFile.exists() ? missingFile : missingFile+ " " + newRSF;
-//			
-//			throw new RuntimeException("Unable to locate one or more RSF file that will be used for comparison\n Files:" + missingFile );
-//		}
-//	}
-	
 	public static void deleteFolder(File folder) {
 	    File[] files = folder.listFiles();
 	    if(files!=null) { //some JVMs return null for empty dirs

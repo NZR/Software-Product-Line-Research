@@ -18,15 +18,7 @@ public class FeatureModelDiff
 	public static void main(String[] args) throws IOException,
 			InterruptedException, SQLException
 	{
-		String[] archs = {
-					"alpha",
-					"arm",
-					"arm64",
-					"avr32","blackfin","c6x",
-						"cris","frv","hexagon","ia64","m32r","m68k",
-						"microblaze","mips","mn10300","openrisc","parisc",
-						"powerpc","s390","score","sh","sparc","tile","unicore32",
-						"xtensa","x86"};
+		String[] archs = DataPaths.archs;
 		for(String arch : archs)
 		{
 			
